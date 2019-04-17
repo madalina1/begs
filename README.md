@@ -1,5 +1,4 @@
-# BEGS (Best Goods)
-# Best deals
+# Best deals - BEGS
 
 Human-Computer Interaction Project
 
