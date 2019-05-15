@@ -1,0 +1,17 @@
+
+1. Care este cea mai simpla solutie de a scana QR code pentru a primi ofertele?            implementation | user experience  
+	a) deschizi camera fott, scanezi qr code si automat se deschide applicatia                   5               9
+	b) deschizi aplicatia si scanezi qr code apasand butonul din meniul de jos                   8               8
+b)
+
+2. Care este cea mai usoara forma de logare?                                                                                 implementation | user experience
+	a) Logarea este optionala, userul poate interactiona si fara, dar sunt beneficii in plus pentru cei cu cont                    8                9
+	b) Accesarea aplicatiei se face prin intermediul unui cont deja existent(ex: facebook)                                         8                7
+	c) Este necesara logarea prin intermediul unui cont deja existent(ex: facebook) sau se creaza un cont in aplicatie:            7                7
+a)
+
+3. Cum este cel mai accesibil pentru a afisa categoriile din care fac parte ofertele?                                        implementation | user experience
+	a) In partea de sus a ecranului, in care userul are posibilitatea de a-si customiza categoriile pe care le vede               7              9
+	b) In partea de jos a ecranului, unul dintre butoanele din meniu                                                              8              10
+	c) Userul nu are posibilitatea de a customiza, sunt afisate cele default                                                      10             6
+b)
