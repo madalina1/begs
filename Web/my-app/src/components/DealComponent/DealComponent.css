@@ -26,6 +26,7 @@
 
 .photo img {
     height: 100%;
+    width: 200px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;    
 }
