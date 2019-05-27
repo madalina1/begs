@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DealComponent from '../DealComponent/DealComponent';
-import notificationPath from '../../assets/notification.png'
+import notificationPath from '../../assets/notification.png';
 import './DealsPage.css';
 
 class DealsPage extends Component {
