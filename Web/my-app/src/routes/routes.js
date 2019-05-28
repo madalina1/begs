@@ -24,14 +24,12 @@ export const routes = [
     {
       path: "/recommendations",
       component: RecommendationsPage,
-      exact: 'exact',
-      private: true
+      exact: 'exact'
     },
     {
       path: "/profile",
       component: ProfilePage,
-      exact: 'exact',
-      private: true
+      exact: 'exact'
     },
     {
       path: "/:id/details",

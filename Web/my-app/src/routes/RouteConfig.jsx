@@ -10,17 +10,17 @@ export const PrivateRoute = ({ component: Component, ...rest }) => (
 )
 
 export const RouteWithSubRoutes = (route) => 
-        !route.private ?  
+        // !route.private ?  
         <Route
             path={route.path}
             render={props => 
                 <route.component {...props} routes={route.routes}/>
             }
         />
-        :
-        <PrivateRoute 
-            path={route.path}
-            render={props => 
-                <route.component {...props} routes={route.routes}/>
-            }
-        />
+        // :
+        // <PrivateRoute 
+        //     path={route.path}
+        //     render={props => 
+        //         <route.component {...props} routes={route.routes}/>
+        //     }
+        // />

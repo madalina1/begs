@@ -1,0 +1,63 @@
+.deal-container {
+    background-color: white;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 8px;
+}
+
+.photo{
+    margin-left: 0;
+}
+
+.category{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    position: absolute;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 32px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.photo img {
+    height: 100%;
+    width: 130px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;  
+    object-fit: cover;  
+}
+
+.info {
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.info .info-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #424242;
+}
+
+.info .info-description {
+    text-align: left;
+    padding: 12px 0;
+    color: #8d8d8d;
+    font-weight: 300;
+}
+
+.info .info-discount {
+    background-color: #0287D0;
+    color: white;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+}
