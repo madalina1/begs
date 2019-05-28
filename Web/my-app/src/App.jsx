@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import { Switch } from 'react-router-dom';
 import { routes } from './routes/routes';
-import { history } from './_helpers/history';
-import { alertActions } from './_actions/alert.actions';
+// import { history } from './_helpers/history';
+// import { alertActions } from './_actions/alert.actions';
 import { RouteWithSubRoutes } from './routes/RouteConfig';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 import './App.css';
+import Menu from './common/Menu/Menu';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    const { dispatch } = this.props;
-    history.listen((location, action) => {
-        dispatch(alertActions.clear());
-    });
-}
+//   constructor(props) {
+//     super(props);
+// }
 
   render() {
     return (
       <div className="App">
+        <Menu url={window.location.href.substring(window.location.href.lastIndexOf('/') + 1)}/>
 
 				<Switch>
 					{routes.map((route, i) => (
@@ -32,12 +29,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  const { alert } = state;
-  return {
-      alert
-  };
-}
+// const mapStateToProps = (state) => {
+//   const { alert } = state;
+//   return {
+//       alert
+//   };
+// }
 
-const connectedApp = connect(mapStateToProps)(App);
-export { connectedApp as App }; 
+// const connectedApp = connect(mapStateToProps)(App);
+export default App; 

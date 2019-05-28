@@ -1,0 +1,71 @@
+.menu-container {
+    padding: 18px 18px 14px 18px;
+    box-shadow: 0 -3px 5px -4px rgb(233, 231, 231);
+    border-top: 1px solid rgb(233, 231, 231);
+    position: fixed;
+    bottom: -2px;
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: all .15s ease-in-out;
+}
+
+.menu-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.menu-item:last-child {
+    padding-right: 0;
+}
+
+.menu-item.menu-active {
+    color: #0287D0;
+}
+
+.home-logo {
+    width: 45px;
+    height: 45px;
+    background: #5a5a5a;
+    /* Rotate */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    border-radius: 10px;
+    margin-top: -25px;
+    margin-right: 25px;
+}
+
+.menu-item.menu-active .home-logo {
+    background: #0287D0;
+}
+
+.logo-image {
+    position: absolute;
+    width: 35px;
+    height: auto;
+    align-self: center;
+    margin-top: 9px;
+}

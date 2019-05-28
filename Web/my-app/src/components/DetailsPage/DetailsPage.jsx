@@ -1,42 +1,56 @@
 import React, { Component } from 'react';
+import { data } from '../../mockData';
+import { Link } from 'react-router-dom';
 
 import './DetailsPage.css';
 
 class DetailsPage extends Component {
-    photoName = "douglas";
-    discount = "20% discount";
-    description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type ";
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            url: window.location.pathname.split('/')[1]
+        }
+    }
 
     render() {
+        const { url } = this.state;
+
         return (
-            <div class="details-container">
-                <div class="photoo">
-                    <img src={"images/"+this.photoName+".png"} alt=""></img>
-                </div>
-                <div class="details">
-                    <div class="discount">{this.discount}</div>
-                    <div class="details-title">Hm</div>
-                    <div class="details-description">{this.description}</div>
-                    <div class="details-cards">
-                        <div class="card">
-                            <div class="card-icon">icon</div>
-                            <div class="card-name">Open</div>
-                            <div class="card-more">10am-10pm</div>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">icon</div>
-                            <div class="card-name">3 friends</div>
-                            <div class="card-more">Interested</div>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">icon</div>
-                            <div class="card-name">89 m</div>
-                            <div class="card-more">away</div>
-                        </div>
+            data.map(deal =>
+                deal.id === url &&
+                <div key={deal.id} className="details-container">
+                    <div className="details-image">
+                        <Link to="/" className="back-button"><i class="fas fa-arrow-left"></i></Link>
+                        <img src={"/images/" + deal.photoName + ".png"} alt={deal.photoName}></img>
+                        <button className="interest-button"><i class="far fa-heart"></i></button>
+                        <div className="overlay"></div>
                     </div>
-                    <div class="details-send">send</div>
+                    <div className="details">
+                        <div className="discount">{deal.discount} % discount</div>
+                        <div className="details-title">{deal.title}</div>
+                        <div className="details-description">{deal.description}</div>
+                        <div className="details-cards">
+                            <div className="card">
+                                <i class="far fa-clock"></i>
+                                <div className="card-name">Open</div>
+                                <div className="card-more">10am-10pm</div>
+                            </div>
+                            <div className="card">
+                                <i class="far fa-heart"></i>
+                                <div className="card-name">3 friends</div>
+                                <div className="card-more">Interested</div>
+                            </div>
+                            <div className="card">
+                                <i class="fas fa-street-view"></i>
+                                <div className="card-name">89 m</div>
+                                <div className="card-more">Away</div>
+                            </div>
+                        </div>
+                        <button className="details-send">Send the offer to a friend <i className="fab fa-telegram-plane"></i></button>
+                    </div>
                 </div>
-            </div>
+            )
         );
     }
 }

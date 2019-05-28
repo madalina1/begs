@@ -5,6 +5,8 @@ import DetailsPage from "../components/DetailsPage/DetailsPage";
 import LoginPage from "../components/LoginPage/LoginPage";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
 import ProfilePage from "../components/ProfilePage/ProfilePage";
+import CategoriesPage from "../components/CategoriesPage/CategoriesPage";
+import QRPage from "../components/QRPage/QRPage";
 
 
 export const routes = [
@@ -24,6 +26,16 @@ export const routes = [
     {
       path: "/recommendations",
       component: RecommendationsPage,
+      exact: 'exact'
+    },
+    {
+      path: "/categoriesPage",
+      component: CategoriesPage,
+      exact: 'exact'
+    },
+    {
+      path: "/qr",
+      component: QRPage,
       exact: 'exact'
     },
     {
