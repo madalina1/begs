@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../../common/Card/Card';
 
-import { data } from '../../mockData';
+import { interests } from '../../mockData';
 import { Link } from 'react-router-dom';
 import './ProfilePage.css';
 
@@ -10,10 +10,13 @@ class ProfilePage extends Component {
         super(props);
 
         this.state = {
-            data: data
+            data: interests,
+            firstPage: true
         }
 
         this.handleNewData = this.handleNewData.bind(this);
+        this.handleInterests = this.handleInterests.bind(this);
+        this.handleSettings = this.handleSettings.bind(this);
     }
 
     handleNewData(newData) {
@@ -22,28 +25,37 @@ class ProfilePage extends Component {
         })
     }
 
-    changePage(a){
-        a = !a;
-        console.log(a);
+    handleInterests() {
+        this.setState({
+            firstPage: true
+        })
+    }
+
+    handleSettings() {
+        this.setState({
+            firstPage: false
+        })
     }
 
     render() {
-        const firstPage = true;
+        const { firstPage } = this.state;
+
         return(
             <React.Fragment>
             <div>
                 <div className="profile-back">
+                    <Link to="/" className="back-button"><i className="fas fa-arrow-left"></i></Link>
                     <div className="profile-photo">
                         <img src={"/images/profile.png"} alt=""></img>
                         <p>Mike Pence</p>
                     </div>
                     <nav className="slidemenu">
     
-                        <input type="radio" name="slideItem" id="slide-item-1" className="slide-toggle"/>
-                        <label htmlFor="slide-item-1" checked={this.firstPage}><span>Interests</span></label>
+                        <input type="radio" name="slideItem" id="slide-item-1" className="slide-toggle" onClick={this.handleInterests} />
+                        <label htmlFor="slide-item-1" checked={firstPage}><span>Interests</span></label>
                         
-                        <input type="radio" name="slideItem" id="slide-item-2" className="slide-toggle"/>
-                        <label htmlFor="slide-item-2" checked={!this.firstPage}><span>Settings</span></label>
+                        <input type="radio" name="slideItem" id="slide-item-2" className="slide-toggle" onClick={this.handleSettings}/>
+                        <label htmlFor="slide-item-2" checked={!firstPage}><span>Settings</span></label>
                         
                         <div className="clear"></div>
                         
@@ -55,7 +67,7 @@ class ProfilePage extends Component {
                 </div>
                 <div className="interests">
                 {
-                    !firstPage ? (
+                    firstPage ? (
                         this.state.data.map((deal, key) =>
                             <div className="deal-card" key={key}>
                                 <Link to={`/${deal.id}/details`} className="deal-link">
@@ -70,13 +82,13 @@ class ProfilePage extends Component {
                             </div>
                         )
                     ) : (
-                        <div  className="settings">
+                        <div className="settings">
                             <div className="item">
-                                <p>Change account registration<i class=" icon fas fa-arrow-right"></i>
+                                <p>Change account registration<i className=" icon fas fa-arrow-right"></i>
                                 </p>
                             </div>
                             <div className="item">
-                                <p>Lorem Ipsum<i class="icon fas fa-arrow-right"></i>
+                                <p>See all friends<i className="icon fas fa-arrow-right"></i>
                                 </p>
                             </div>
                         </div>

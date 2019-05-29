@@ -7,9 +7,10 @@
     text-align: center;
 }
 
-.profile-photo p{
+.profile-photo p {
     color: white;
     font-family: arial, sans-serif;
+    padding-top: 12px;
 }
 
 .profile-back img {
@@ -21,12 +22,14 @@
 }
 
 .interests{
-  margin: 0 8px;
+  margin: 0 24px;
 }
 
 .settings .item {
   padding: 25px 20px;
   border-bottom: 1px solid rgb(173, 173, 173);
+  margin-left: -24px;
+  margin-right: -24px;
 }
 
 .settings .item p{
@@ -53,7 +56,7 @@
   .slidemenu{
     font-family: arial, sans-serif;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 24px auto;
     overflow: hidden;
   }
   .slidemenu label{

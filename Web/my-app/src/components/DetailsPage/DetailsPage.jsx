@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { data } from '../../mockData';
+import { data, interests } from '../../mockData';
 import { Link } from 'react-router-dom';
 
 import './DetailsPage.css';
@@ -9,12 +9,28 @@ class DetailsPage extends Component {
         super(props);
 
         this.state = {
-            url: window.location.pathname.split('/')[1]
+            url: window.location.pathname.split('/')[1],
+            interest: false
         }
+
+        this.toggleInterest = this.toggleInterest.bind(this);
+    }
+
+    toggleInterest() {
+        this.setState({
+            interest: !this.state.interest 
+        })
+    }
+
+    componentDidMount() {
+        let newArray = []
+        data.map(element => interests.map(interest => element.id === interest.id && newArray.push(interest)))
+
+        newArray.map(element => element.id === this.state.url && this.setState({ interest: true }))
     }
 
     render() {
-        const { url } = this.state;
+        const { url, interest } = this.state;
 
         return (
             data.map(deal =>
@@ -23,7 +39,7 @@ class DetailsPage extends Component {
                     <div className="details-image">
                         <Link to="/" className="back-button"><i className="fas fa-arrow-left"></i></Link>
                         <img src={"/images/" + deal.photoName + ".png"} alt={deal.photoName}></img>
-                        <button className="interest-button"><i className="far fa-heart"></i></button>
+                        <button className="interest-button" onClick={this.toggleInterest}><i className={`${interest ? 'fas' : 'far'} fa-heart`}></i></button>
                         <div className="overlay"></div>
                     </div>
                     <div className="details">
@@ -42,9 +58,11 @@ class DetailsPage extends Component {
                                 <div className="card-more">Interested</div>
                             </div>
                             <div className="card">
-                                <i className="fas fa-street-view"></i>
-                                <div className="card-name">89 m</div>
-                                <div className="card-more">Away</div>
+                                <a href={`http://maps.google.com/?q=${deal.address}`} style={{ textDecoration: 'none', textAlign: 'center', '-webkit-tap-highlight-color': 'transparent;' }}>
+                                    <i className="fas fa-street-view"></i>
+                                    <div className="card-name">89 m</div>
+                                    <div className="card-more">Away</div>
+                                </a>
                             </div>
                         </div>
                         <button className="details-send">Send the offer to a friend <i className="fab fa-telegram-plane"></i></button>

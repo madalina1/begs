@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../../common/SearchBar/SearchBar';
 import Notifications from '../../common/Notifications/Notifications';
-import { data } from '../../mockData';
+import { recommendations } from '../../mockData';
 import { Link } from 'react-router-dom';
 
 import './RecommendationPage.css';
@@ -12,7 +12,7 @@ class RecommendationPage extends Component {
         super(props);
 
         this.state = {
-            data: data
+            data: recommendations
         }
 
         this.handleNewData = this.handleNewData.bind(this);
@@ -36,24 +36,22 @@ class RecommendationPage extends Component {
                 <div className="deals-container">
                     <div className="deals-title">For you</div>
                     <div className="deals-subtitle">Today best deals</div>
-                    <div className="recommendations-container">
-                    {
-                        this.state.data.map((deal, key) =>
-                            <div className="deal-card" key={key}>
-                                <Link to={`/${deal.id}/details`} className="deal-link">
-                                    <RecommendationsCard 
-                                        title={deal.title}
-                                        description={deal.description}
-                                        discount={deal.discount}
-                                        category={deal.category}
-                                        photoName={deal.photoName}
-                                    />
-                                </Link>
-                            </div>
-                        )
-                    }
+                        {
+                            this.state.data.map((deal, key) =>
+                                <div className="deal-card" key={key}>
+                                    <Link to={`/${deal.id}/details`} className="deal-link">
+                                        <RecommendationsCard 
+                                            title={deal.title}
+                                            description={deal.description}
+                                            discount={deal.discount}
+                                            category={deal.category}
+                                            photoName={deal.photoName}
+                                        />
+                                    </Link>
+                                </div>
+                            )
+                        }
                     </div>
-                </div>
             </React.Fragment>
         );
     }

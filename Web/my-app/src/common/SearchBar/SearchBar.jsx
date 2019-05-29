@@ -35,7 +35,7 @@ class SearchBar extends Component {
                 Object.keys(item).map(element => {
                     let searchText = String(item[element]).toLowerCase();
 
-                    return element !== 'id' && element !== 'photoName' && element !== 'notification' 
+                    return element !== 'id' && element !== 'photoName' && element !== 'notification' && element !== 'address'
                         && searchText.includes(e.target.value) && 
                         this.state.newData.filter(x => x.id === item['id'] && newData.push(x))
                     } 
