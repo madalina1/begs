@@ -5,7 +5,8 @@ export const data = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
         discount: 5,
         category: "Beauty",
-        photoName: "douglas"
+        photoName: "douglas",
+        notification: "Best articles at a SUPER price!!"
     },
     {
         id: "hm1",
@@ -13,7 +14,8 @@ export const data = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
         discount: 20,
         category: "Fashion",
-        photoName: "hm"
+        photoName: "hm",
+        notification: "Come and see the deals."
     },
     {
         id: "mc1",
@@ -31,4 +33,8 @@ export const data = [
         category: "Food",
         photoName: "mc"
     }
+];
+
+export const shoppingLocations = [
+    "Palas", "Baneasa Shopping City", "Carrefour Felicia", "Iulius Mall"
 ]

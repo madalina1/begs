@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 12px 24px 12px;
+    padding: 0 12px 44px 12px;
 }
 
 .discount {
@@ -54,6 +54,7 @@
     font-size: 16px;
     font-weight: 300;
     color: #8d8d8d;
+    text-align: center;
 }
 
 .details-cards {
@@ -73,6 +74,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .card i {

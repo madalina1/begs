@@ -24,6 +24,8 @@ class App extends Component {
 						<RouteWithSubRoutes key={i} {...route} />
 					))}
 				</Switch>
+
+        <div style={{ height: '70px', bottom: 0 }}></div>
       </div>
     );
   }

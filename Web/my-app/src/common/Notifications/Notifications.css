@@ -1,0 +1,84 @@
+.notification-button {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+.notification-button img {
+    height: 24px;
+}
+
+.notification-badge {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #0287D0;
+    color: #ffffff;
+    position: absolute;
+    top: 9px;
+    right: 24px;
+}
+
+.notifications-dropdown {
+    background-color: #ffffff;
+    padding: 12px 8px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    width: 225px;
+    right: 24px;
+    position: absolute;
+    border-radius: 6px;
+    display: none;
+}
+
+.notifications-dropdown.active {
+    display: block;
+}
+
+.notifications-dropdown ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    color: #8d8d8d;
+}
+
+.notifications-dropdown ul li {
+    padding: 8px 14px;
+    margin-left: -8px;
+    margin-right: -8px;
+    font-size: 14px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.notifications-dropdown ul li a {
+    text-decoration: none;
+    color: #8d8d8d;
+}
+
+.notifications-dropdown ul li:first-child {
+    padding-top: 0;
+}
+
+.notifications-dropdown ul li:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
+.notifications-dropdown ul li .notifications-title {
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 14px;
+    color: #6e6e6e;
+    font-weight: 600;
+}
+
+.notifications-dropdown ul li.active .notifications-title, .notifications-dropdown ul li.active a {
+    color: #0287D0;
+}

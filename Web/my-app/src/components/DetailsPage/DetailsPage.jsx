@@ -21,9 +21,9 @@ class DetailsPage extends Component {
                 deal.id === url &&
                 <div key={deal.id} className="details-container">
                     <div className="details-image">
-                        <Link to="/" className="back-button"><i class="fas fa-arrow-left"></i></Link>
+                        <Link to="/" className="back-button"><i className="fas fa-arrow-left"></i></Link>
                         <img src={"/images/" + deal.photoName + ".png"} alt={deal.photoName}></img>
-                        <button className="interest-button"><i class="far fa-heart"></i></button>
+                        <button className="interest-button"><i className="far fa-heart"></i></button>
                         <div className="overlay"></div>
                     </div>
                     <div className="details">
@@ -32,17 +32,17 @@ class DetailsPage extends Component {
                         <div className="details-description">{deal.description}</div>
                         <div className="details-cards">
                             <div className="card">
-                                <i class="far fa-clock"></i>
+                                <i className="far fa-clock"></i>
                                 <div className="card-name">Open</div>
                                 <div className="card-more">10am-10pm</div>
                             </div>
                             <div className="card">
-                                <i class="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                                 <div className="card-name">3 friends</div>
                                 <div className="card-more">Interested</div>
                             </div>
                             <div className="card">
-                                <i class="fas fa-street-view"></i>
+                                <i className="fas fa-street-view"></i>
                                 <div className="card-name">89 m</div>
                                 <div className="card-more">Away</div>
                             </div>

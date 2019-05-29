@@ -7,8 +7,7 @@
     display: flex;
 }
 
-.search-icon {
-    width: 14px;
+.search-icon.search-icon {
     height: 14px;
     margin-right: 8px;
 }
@@ -45,6 +44,8 @@
     align-items: center;
     outline: none;
     background: transparent;
+    width: 194px;
+    justify-content: space-between;
 }
 
 .dropdown-location .location-icon {
@@ -58,6 +59,10 @@
     font-size: 14px;
     padding-right: 22px;
     padding-top: 2px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .dropdown-arrow {
@@ -79,6 +84,7 @@
     width: 150px;
     right: 24px;
     position: absolute;
+    border-radius: 6px;
     display: none;
 }
 
@@ -96,6 +102,10 @@
     margin-left: -8px;
     margin-right: -8px;
     font-size: 14px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .search-location-list ul li:first-child {
@@ -105,4 +115,8 @@
 .search-location-list ul li:last-child {
     padding-bottom: 0;
     border: none;
+}
+
+.search-dropdown-active {
+    display: block;
 }
