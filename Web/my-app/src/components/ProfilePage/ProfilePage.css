@@ -1,0 +1,99 @@
+.profile-back{
+    background-image: linear-gradient(-45deg, rgb(154, 116, 216), rgb(138, 191, 240));
+}
+
+.profile-photo{
+    padding: 17% 0 0 0;
+    text-align: center;
+}
+
+.profile-photo p{
+    color: white;
+    font-family: arial, sans-serif;
+}
+
+.profile-back img {
+    width: 30%;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    padding: 4px;
+}
+
+.interests{
+  margin: 0 8px;
+}
+
+.settings .item {
+  padding: 25px 20px;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.settings .item p{
+  font-family: arial, sans-serif;
+}
+
+.settings .item p .icon{
+ float: right;
+ opacity: 0.5;
+}
+
+
+/* Menu */
+ *{
+    margin: 0;
+    padding: 0;
+  }
+  .clear{
+    clear: both;
+  }
+  .slide-toggle{
+    display: none;
+  }
+  .slidemenu{
+    font-family: arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  .slidemenu label{
+    width: 25%;
+    text-align: center;
+    display: block;
+    float: left;
+    color: white;
+    opacity: 0.6;
+  }
+  
+  .slidemenu label span{
+    display: block;
+    padding: 10px;    
+  }
+  
+  /*Bar Style*/
+  .slider{
+    height: 5px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .slider .bar{
+    width: 25%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+  }
+  
+  /*Animations*/
+  .slidemenu label, .slider .bar {
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+  }
+  /*Toggle*/
+  .slidemenu .slide-toggle:checked + label{
+    opacity: 1;
+  }
+  .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+  .slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+  
