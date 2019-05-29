@@ -1,0 +1,42 @@
+.recommendations-card {
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.card-image img {
+    height: 210px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;  
+    object-fit: cover;  
+}
+
+.info.recommendations {
+    padding: 24px 10px 24px 24px;
+}
+
+.recommendation-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #424242;
+}
+
+.recommendation-description {
+    text-align: left;
+    padding: 18px 0;
+    color: #8d8d8d;
+    font-weight: 300;
+}
+
+.recommendation-discount {
+    background-color: #ffffff;
+    color: #0287D0;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid #0287D0;
+    font-weight: 700;
+}

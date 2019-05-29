@@ -1,0 +1,39 @@
+svg {
+    margin: auto;
+    fill: #424242;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.category-section {
+    flex-basis: 33%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-svg {
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    margin: auto;
+    border: 1px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.category-svg.active svg {
+    fill: #ffffff;
+}
+
+.category-title {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #8d8d8d;
+}
+

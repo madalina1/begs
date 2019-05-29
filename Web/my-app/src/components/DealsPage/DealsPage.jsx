@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Card from '../../common/Card/Card';
 import { Link } from 'react-router-dom';
 import { data } from '../../mockData';
-import './DealsPage.css';
 import SearchBar from '../../common/SearchBar/SearchBar';
 import Notifications from '../../common/Notifications/Notifications';
+
+import './DealsPage.css';
 
 class DealsPage extends Component {
     constructor(props) {

@@ -113,6 +113,9 @@
     text-decoration: none;
     color: #ffffff;
     z-index: 2;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 .back-button i {
