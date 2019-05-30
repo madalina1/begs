@@ -10,20 +10,20 @@ import './App.css';
 import Menu from './common/Menu/Menu';
 
 class App extends Component {
-//   constructor(props) {
-//     super(props);
-// }
+  //   constructor(props) {
+  //     super(props);
+  // }
 
   render() {
     return (
       <div className="App">
-        <Menu url={window.location.href.substring(window.location.href.lastIndexOf('/') + 1)}/>
+        <Menu url={window.location.href.substring(window.location.href.lastIndexOf('/') + 1)} />
 
-				<Switch>
-					{routes.map((route, i) => (
-						<RouteWithSubRoutes key={i} {...route} />
-					))}
-				</Switch>
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
 
         <div style={{ height: '70px', bottom: 0 }}></div>
       </div>

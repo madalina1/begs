@@ -44,3 +44,15 @@
     text-align: right;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .deals-container{
+        padding: 24px 76px;
+        padding-bottom: 0;
+    }
+
+    .notifications-container {
+        padding-top: 22px;
+        padding-right: 56px;
+    }
+}
+

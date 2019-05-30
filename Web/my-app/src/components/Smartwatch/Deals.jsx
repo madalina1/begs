@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import Card from '../../common/Card/Card';
 import { Link } from 'react-router-dom';
 import { data } from '../../mockData';
-import SearchBar from '../../common/SearchBar/SearchBar';
-import Notifications from '../../common/Notifications/Notifications';
+import RecommendationsCard from '../RecommendationsPage/RecommendationsCard/RecommendationsCard';
 
-import './DealsPage.css';
-
-class DealsPage extends Component {
+class Deals extends Component {
     constructor(props) {
         super(props);
 
@@ -26,21 +22,14 @@ class DealsPage extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <div className="notifications-container">
-                    <Notifications />
-                </div>
-                <div className="search-bar-container">
-                    <SearchBar handleNewData={this.handleNewData} data={data}/>
-                </div>
-                <div className="deals-container">
-                    <div className="deals-title">All Deals</div>
-                    <div className="deals-subtitle">Today best deals</div>
+            <div className={this.props.customStyle} style={{ backgroundColor: '#ffffff' }}>
+                <div className="">
+                    <div className="smart-title">All Deals</div>
                     {
                         this.state.data.map((deal, key) =>
-                            <div className="deal-card" key={key}>
-                                <Link to={`/${deal.id}/details`} className="deal-link">
-                                    <Card
+                            <div className="deal-card smart-card" key={key}>
+                                <Link to={`/smartwatch/${deal.id}/details`} className="deal-link">
+                                    <RecommendationsCard
                                         title={deal.title}
                                         description={deal.description}
                                         discount={deal.discount}
@@ -52,9 +41,9 @@ class DealsPage extends Component {
                         )
                     }
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 }
 
-export default DealsPage;
+export default Deals;

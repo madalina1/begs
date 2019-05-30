@@ -82,3 +82,15 @@
 .notifications-dropdown ul li.active .notifications-title, .notifications-dropdown ul li.active a {
     color: #0287D0;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .notification-badge {
+        top: 19px;
+        right: 50px;
+    }
+
+    .notifications-dropdown {
+        width: 250px;
+        right: 50px;
+    }
+}

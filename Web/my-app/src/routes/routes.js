@@ -7,6 +7,7 @@ import RegisterPage from "../components/RegisterPage/RegisterPage";
 import ProfilePage from "../components/ProfilePage/ProfilePage";
 import CategoriesPage from "../components/CategoriesPage/CategoriesPage";
 import QRPage from "../components/QRPage/QRPage";
+import Smartwatch from "../components/Smartwatch/Smartwatch";
 
 
 export const routes = [
@@ -36,6 +37,21 @@ export const routes = [
     {
       path: "/qr",
       component: QRPage,
+      exact: 'exact'
+    },
+    {
+      path: "/smartwatch",
+      component: Smartwatch,
+      exact: 'exact'
+    },
+    {
+      path: "/smartwatch/notification",
+      component: Smartwatch,
+      exact: 'exact'
+    },
+    {
+      path: "/smartwatch/:id/details",
+      component: Smartwatch,
       exact: 'exact'
     },
     {

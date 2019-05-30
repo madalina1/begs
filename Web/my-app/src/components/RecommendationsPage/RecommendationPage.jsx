@@ -31,7 +31,7 @@ class RecommendationPage extends Component {
                     <Notifications />
                 </div>
                 <div className="search-bar-container">
-                    <SearchBar handleNewData={this.handleNewData} />
+                    <SearchBar handleNewData={this.handleNewData} data={recommendations}/>
                 </div>
                 <div className="deals-container">
                     <div className="deals-title">For you</div>

@@ -21,3 +21,10 @@
     margin: 20px 0 0 0;
     font-size: 20px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .categories-container {
+        padding: 46px 76px;
+        padding-bottom: 0;
+    }
+}

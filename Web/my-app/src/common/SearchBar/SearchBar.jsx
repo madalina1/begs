@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import search from '../../assets/images/search.svg';
-import { shoppingLocations, data } from '../../mockData';
+import { shoppingLocations } from '../../mockData';
 
 import './SearchBar.css';
 
@@ -11,7 +11,7 @@ class SearchBar extends Component {
         this.state = {
             selectedLocation: shoppingLocations[0] || '',
             isDropdownOpen: false,
-            newData: data
+            newData: this.props.data
         }
 
         this.toogleDropdown = this.toogleDropdown.bind(this);
@@ -44,7 +44,15 @@ class SearchBar extends Component {
         } else {
             newData = this.state.newData;
         }
-        this.props.handleNewData(newData)
+        const result = [];
+        const map = new Map();
+        for (const item of newData) {
+            if(!map.has(item.id)){
+                map.set(item.id, true);    // set any value to Map
+                result.push(item);
+            }
+        }
+        this.props.handleNewData(result)
     }
 
     render() {

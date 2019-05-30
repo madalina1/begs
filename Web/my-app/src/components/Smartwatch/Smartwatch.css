@@ -1,0 +1,208 @@
+.watch-container {
+    background: #00bad2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch {
+    width: 16.7em;
+    display: inline-block;
+    margin: 0 4em
+}
+
+.watch_face {
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    background: #222;
+    border: 8px solid #999;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0 0 6px #555;
+}
+
+.watch_display {
+    z-index: 99;
+    border-radius: 50%;
+    height: 100.75%;
+    width: 100.75%;
+    border: 4px solid #555;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.9)100%);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.watch_button {
+    position: relative;
+    left: 14.46em;
+    height: 15px;
+    width: 12px;
+    bottom: 8em;
+    background: #787878;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px dotted #999;
+    border-bottom: 1px dotted #999;
+    border-right: 1px dotted #999;
+    cursor: pointer;
+}
+
+.top_band,
+.bottom_band {
+    width: 7.5em;
+    background: #222;
+    position: relative;
+    margin-left: 3.75em;
+    margin-right: 3.75em;
+    height: 7.5em;
+    border-left: 8px solid #777;
+    border-right: 8px solid #777;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #555;
+}
+
+.top_band {
+    bottom: -1.75em;
+}
+
+.bottom_band {
+    top: -1.75em;
+    height: 8.5em;
+}
+
+.screen_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.smart-title {
+    font-size: 18px;
+    margin-top: 37px;
+    margin-bottom: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.smart-card {
+    margin-left: 0; 
+}
+
+.smart-card .category {
+    display: none;
+}
+
+.smart-card .deal-container {
+    height: 129px;
+}
+
+.smart-card .card-image img {
+    height: 100px;
+}
+
+.smart-card .info.recommendations {
+    padding-top: 6px;
+}
+
+.smart-card .recommendation-discount {
+    align-self: center;
+    margin-left: -11px;
+}
+
+.details-smart-container .details-image {
+    position: initial;
+}
+
+.details-smart-container .details-image img {
+    height: 200px;
+}
+
+.details-smart-container .discount {
+    margin-top: -122px;
+    z-index: initial;
+}
+
+.details-smart-container .back-button {
+    top: 62px;
+    z-index: initial;
+}
+
+.details-smart-container .interest-button {
+    top: 58px;
+    right: 30px;
+    z-index: initial;
+}
+
+.details-smart-container .details-description {
+    margin-bottom: 0;
+}
+
+.details-smart-container .overlay, .details-smart-container .details-cards, .details-smart-container .details-send {
+    display: none;
+}
+
+.smartwatch-background {
+    background: url("../../assets/images/smartwatch-background.png") no-repeat fixed center;
+}
+
+.smartwatch-notification {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smartwatch-notification a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.smartwatch-notification ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.smartwatch-notification ul li {
+    padding: 8px 14px;
+    margin-left: -8px;
+    margin-right: -8px;
+    font-size: 12px;
+    border-bottom: 1px solid #ffffff7e;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.smartwatch-notification ul li:last-child {
+    border: none;
+}
+
+.smartwatch-notification .notifications-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.screen_image::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.screen_image::-webkit-scrollbar-thumb {
+    background: transparent;
+}

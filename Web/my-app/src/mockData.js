@@ -2,7 +2,7 @@ export const data = [
     {
         id: "douglas1",
         title: "Douglas",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
+        description: "The Parfümerie Douglas is an internationally operating perfumery chain. Its headquarters are located in Düsseldorf, Germany. Parfümerie Douglas was part of the Douglas Holding, but since 1 June 2015, 85 percent belong to the financial investor CVC Capital Partners and 15 percent to the Kreke family.",
         discount: 5,
         category: "Beauty",
         photoName: "douglas",
@@ -12,7 +12,7 @@ export const data = [
     {
         id: "hm1",
         title: "H&M",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
+        description: "H&M is a Swedish multinational clothing-retail company known for its fast-fashion clothing for men, women, teenagers and children.",
         discount: 20,
         category: "Fashion",
         photoName: "hm",
@@ -21,21 +21,21 @@ export const data = [
     },
     {
         id: "mc1",
-        title: "McDonald's",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
+        title: "McDonald's Iasi",
+        description: "McDonald's is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
         discount: 10,
         category: "Food",
         photoName: "mc",
         address: "Piața Gării nr. 4, Iași 700090"
     },
     {
-        id: "mc2",
-        title: "McDonald's",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
-        discount: 10,
+        id: "salad1",
+        title: "Salad Box Palas",
+        description: "Salad Box is a friendship business. The story begun in 2011, when Dan Isai had an idea for offering Romanians a new lifestyle, based on healthy food at affordable prices.",
+        discount: 2,
         category: "Food",
-        photoName: "mc",
-        address: "Iulius Mall, Bulevardul Tudor Vladimirescu nr. 2, Iași 700259"
+        photoName: "saladBox",
+        address: "Palas Food Court, Iași"
     }
 ];
 
@@ -46,8 +46,8 @@ export const shoppingLocations = [
 export const interests = [
     {
         id: "mc1",
-        title: "McDonald's",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
+        title: "McDonald's Iasi",
+        description: "McDonald's is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
         discount: 10,
         category: "Food",
         photoName: "mc"
@@ -57,18 +57,18 @@ export const interests = [
 export const recommendations = [
     {
         id: "mc1",
-        title: "McDonald's",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
+        title: "McDonald's Iasi",
+        description: "McDonald's is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
         discount: 10,
         category: "Food",
         photoName: "mc"
     },
     {
-        id: "mc2",
-        title: "McDonald's",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard.",
-        discount: 10,
+        id: "salad1",
+        title: "Salad Box Palas",
+        description: "Salad Box is a friendship business. The story begun in 2011, when Dan Isai had an idea for offering Romanians a new lifestyle, based on healthy food at affordable prices.",
+        discount: 2,
         category: "Food",
-        photoName: "mc"
+        photoName: "saladBox"
     }
 ]

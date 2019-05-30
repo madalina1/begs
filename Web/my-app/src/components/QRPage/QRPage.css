@@ -3,6 +3,7 @@
     color: #424242;
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .qr-container {
@@ -28,4 +29,18 @@
 
 .qr-section {
     background-color: #535353;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .qr-upload {
+        bottom: -132px;
+    }
+
+    .qr-submit {
+        bottom: -177px;
+    }
+
+    .qr-description {
+        margin-bottom: 130px;
+    }
 }

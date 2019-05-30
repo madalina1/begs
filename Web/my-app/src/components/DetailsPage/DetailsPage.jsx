@@ -58,7 +58,7 @@ class DetailsPage extends Component {
                                 <div className="card-more">Interested</div>
                             </div>
                             <div className="card">
-                                <a href={`http://maps.google.com/?q=${deal.address}`} style={{ textDecoration: 'none', textAlign: 'center', '-webkit-tap-highlight-color': 'transparent;' }}>
+                                <a href={`http://maps.google.com/?q=${deal.address}`} style={{ textDecoration: 'none', textAlign: 'center', WebkitTapHighlightColor: 'transparent' }}>
                                     <i className="fas fa-street-view"></i>
                                     <div className="card-name">89 m</div>
                                     <div className="card-more">Away</div>
